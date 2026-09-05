@@ -1,0 +1,18 @@
+UAS-DTU GLOBAL RANKING
+======================
+
+PATH RANKING
+------------
+1. IMG-20260831-WA0025.jpg - Path Points = 2079
+2. IMG-20260831-WA0028.jpg - Path Points = 4608
+3. IMG-20260831-WA0026.jpg - Path Points = 4918
+4. IMG-20260831-WA0027.jpg - Path Points = 5137
+5. IMG-20260831-WA0029.jpg - Path Points = 6333
+
+TIME RANKING
+------------
+1. IMG-20260831-WA0025.jpg - Time = 124.7516 seconds
+2. IMG-20260831-WA0028.jpg - Time = 272.1782 seconds
+3. IMG-20260831-WA0026.jpg - Time = 283.0449 seconds
+4. IMG-20260831-WA0027.jpg - Time = 292.9691 seconds
+5. IMG-20260831-WA0029.jpg - Time = 360.9708 seconds
