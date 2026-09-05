@@ -60,4 +60,9 @@ pip install opencv-python numpy
 python batch_runner.py (to run multiple input images)
 python main.py input/IMG-20260831-WA0025.jpg (to run single image)
 
-# THE PART OF THE CODE I WAS NOT ABLE TO DO WAS TO FIND THE SHORTEST PATH BECOZ AFTER TRYING MANY TIMES AND DUE TO LARGE PIXELS AND NUMBER OF PERMUTATIONS THE CODE WAS TAKING HOURS TO COMPLETE THAT ALTHOUGH I TRIED BUT I WAS NOT ABLE TO THINK ANY OTHER METHOD SO INSTEAD I ADDED ONLY PATH WITH NO CONDITION THAT EXECUTES IN SHORT TIME
+## 
+The main difficulty I faced was finding the shortest path for the rover.
+
+I tried using different path orders, but because of the large image size and the number of possible casualty permutations, the program was taking a very long time to complete.
+
+Therefore, I used a simpler route-generation approach that visits the casualties and reaches the final destination while avoiding non-traversable areas. This allowed the program to process the images within a reasonable amount of time.
