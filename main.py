@@ -24,17 +24,16 @@ print("Image shape:", image.shape)
 
 os.makedirs("output", exist_ok=True)
 
-# ============================================================
+
 # STEP 2: CONVERT IMAGE TO HSV
 
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 print("HSV conversion completed.")
 
-# ============================================================
-# STEP 3: CREATE TRAVERSABILITY MASK
+# STEP 3: CREATE TRAVERSABILITY MASk
 
-# ------------------------------------------------------------
+# 
 # BLACK OBSTACLES
 
 lower_black = np.array([0, 0, 0])
@@ -62,13 +61,13 @@ blue_mask = cv2.inRange(
     lower_blue,
     upper_blue
 )
-# ------------------------------------------------------------
+# 
 # COMBINE
 non_traversable_mask = cv2.bitwise_or(
     black_mask,
     blue_mask
 )
-# ------------------------------------------------------------
+# ------------------------
 # REMOVE VERY SMALL NOISE
 
 kernel = np.ones((3, 3), np.uint8)
@@ -116,7 +115,7 @@ print("Saved at:", mask_output_path)
 # ============================================================
 # STEP 4: DETECT CASUALTIES
 
-# ------------------------------------------------------------
+# 
 # RED
 
 lower_red1 = np.array([0, 80, 60])
@@ -141,7 +140,7 @@ red_mask = cv2.bitwise_or(
     red_mask1,
     red_mask2
 )
-# ------------------------------------------------------------
+# 
 # YELLOW
 
 lower_yellow = np.array([15, 80, 80])
@@ -152,7 +151,7 @@ yellow_mask = cv2.inRange(
     lower_yellow,
     upper_yellow
 )
-# ------------------------------------------------------------
+# 
 # WHITE
 
 lower_white = np.array([0, 0, 180])
@@ -195,7 +194,7 @@ casualty_detection_image = image.copy()
 
 casualties = []
 
-# ============================================================
+# ======================
 # PROCESS EACH CASUALTY
 
 for contour in contours:
@@ -213,7 +212,7 @@ for contour in contours:
     if perimeter == 0:
         continue
 
-    # --------------------------------------------------------
+    # 
     # CENTRE
    
     moments = cv2.moments(contour)
@@ -1273,7 +1272,7 @@ else:
         route_output_path
     )
 
-    # ========================================================
+    # 
     # DISPLAY ROUTE
     
     cv2.imshow(
@@ -1281,7 +1280,7 @@ else:
         route_image
     )
 
-# ============================================================
+# 
 # SHOW OTHER RESULTS
 
 cv2.imshow(
@@ -1307,8 +1306,7 @@ print(
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
-# ============================================================
+#
 # STEP 12: TIME CALCULATION
 
 def get_terrain_speed(x, y):
